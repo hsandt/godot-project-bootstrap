@@ -5,13 +5,13 @@ signal back_to_main_pressed
 @onready var content : VBoxContainer = $%Content
 @onready var options_menu : Control = $%OptionsMenu
 @onready var resume_game_button: Button = $%ResumeGameButton
-	
+
 func open_pause_menu():
 	#Stops game and shows pause menu
 	get_tree().paused = true
 	show()
 	resume_game_button.grab_focus()
-	
+
 func close_pause_menu():
 	get_tree().paused = false
 	hide()
