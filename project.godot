@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Godot Project Bootstrap - Compatibility Renderer"
+run/main_scene="res://scenes/main_menu_scene.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -21,6 +22,8 @@ buses/default_bus_layout="res://addons/EasyMenus/default_bus_layout.tres"
 [autoload]
 
 MenuTemplateManager="*res://addons/EasyMenus/Nodes/menu_template_manager.tscn"
+SceneManager="*res://singletons/SceneManager.tscn"
+TransitionScreen="*res://singletons/TransitionScreen.tscn"
 
 [rendering]
 
