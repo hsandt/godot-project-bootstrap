@@ -14,6 +14,14 @@ config/name="Godot Project Bootstrap - Compatibility Renderer"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://addons/EasyMenus/default_bus_layout.tres"
+
+[autoload]
+
+MenuTemplateManager="*res://addons/EasyMenus/Nodes/menu_template_manager.tscn"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
