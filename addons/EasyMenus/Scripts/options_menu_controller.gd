@@ -24,6 +24,10 @@ func go_back():
 
 # Called from outside initializes the options menu
 func on_open():
+	# Local fix for https://github.com/SavoVuksan/EasyMenus/issues/6
+	# Auto-scroll to top when options menu is opened
+	$MarginContainer/ScrollContainer.scroll_vertical = 0.0
+
 	sfx_volume_slider.hslider.grab_focus()
 
 	sfx_bus_index = AudioServer.get_bus_index(OptionsConstants.sfx_bus_name)
