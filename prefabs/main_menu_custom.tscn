@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bicer5hvlabr8"]
 
 [ext_resource type="Script" path="res://addons/EasyMenus/Scripts/main_menu_controller.gd" id="1_eaawj"]
-[ext_resource type="PackedScene" uid="uid://qlskttl1wjr7" path="res://addons/EasyMenus/Scenes/options_menu.tscn" id="2_k28jb"]
+[ext_resource type="PackedScene" uid="uid://bin6b2ypkka84" path="res://prefabs/options_menu_custom.tscn" id="2_87k8p"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -70,7 +70,7 @@ focus_previous = NodePath("../OptionsButton")
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 
-[node name="OptionsMenu" parent="." instance=ExtResource("2_k28jb")]
+[node name="OptionsMenu" parent="." instance=ExtResource("2_87k8p")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
