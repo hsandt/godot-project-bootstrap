@@ -15,6 +15,9 @@ grow_vertical = 2
 [node name="MainMenuManager" type="Node" parent="."]
 script = ExtResource("1_1qlj3")
 first_scene = ExtResource("2_wnfuy")
+initial_fade_in_speed = 2.0
+start_game_fade_out_speed = 2.0
+start_game_fade_in_speed = 2.0
 
 [node name="MainMenu" parent="." instance=ExtResource("3_520ah")]
 layout_mode = 1

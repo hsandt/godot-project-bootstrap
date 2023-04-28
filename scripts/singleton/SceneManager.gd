@@ -10,11 +10,12 @@ func change_scene(new_scene: PackedScene):
 
 
 ## Change scene with fade out screen and back in
-func change_scene_with_fade_async(scene: PackedScene):
-	await TransitionScreen.fade_out_async()
+func change_scene_with_fade_async(scene: PackedScene,
+		fade_out_speed: float = 1.0, fade_in_speed: float = 1.0):
+	await TransitionScreen.fade_out_async(fade_out_speed)
 	# await should wait for end of frame, so we can safely call_change_scene_immediate here
 	_change_scene_immediate(scene)
-	await TransitionScreen.fade_in_async()
+	await TransitionScreen.fade_in_async(fade_in_speed)
 
 
 func _change_scene_immediate(scene: PackedScene):
