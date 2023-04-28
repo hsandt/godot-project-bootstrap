@@ -13,6 +13,7 @@ Requirements
 - godot4.0.2_stable must be in PATH
 - export_presets.cfg file must be at project root (from editor using Project > Export dialog)
 - export templates must be installed locally (on Linux, in ~/.local/share/godot/export_templates/VERSION)
+CURRENTLY DISABLED until https://github.com/pkowal1982/godoticon/issues/2 is fixed:
 - CreateIcon.gd and ReplaceIcon.gd from https://github.com/pkowal1982/godoticon must be in '$godoticon_path'
 - custom icons must be at project root as icon_16x16.png icon_32x32.png icon_48x48.png icon_64x64.png icon_128x128.png icon_256x256.png
 "
@@ -64,10 +65,11 @@ export_release() {
   mkdir -p "Export/$version_folder"
   "$godot_bin" --no-window --export-release "$preset" "$target_path" --verbose
 
-  if [[ "$replace_icon" == true ]]; then
-    "$godot_bin" -s "$godoticon_path/CreateIcon.gd" generated_icon.ico icon_16x16.png icon_32x32.png icon_48x48.png icon_64x64.png icon_128x128.png icon_256x256.png
-    "$godot_bin" -s "$godoticon_path/ReplaceIcon.gd" generated_icon.ico "$target_path"
-  fi
+  # CURRENTLY DISABLED until https://github.com/pkowal1982/godoticon/issues/2 is fixed:
+  # if [[ "$replace_icon" == true ]]; then
+  #   "$godot_bin" -s "$godoticon_path/CreateIcon.gd" generated_icon.ico icon_16x16.png icon_32x32.png icon_48x48.png icon_64x64.png icon_128x128.png icon_256x256.png
+  #   "$godot_bin" -s "$godoticon_path/ReplaceIcon.gd" generated_icon.ico "$target_path"
+  # fi
 }
 
 export_platform_release() {
